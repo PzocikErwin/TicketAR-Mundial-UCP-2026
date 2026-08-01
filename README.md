@@ -1,106 +1,116 @@
-﻿# TicketAR
+# TicketAR — Plataforma de Venta de Entradas · Mundial 2026
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4167fcb406a44fb89c4cdc047a3eb7a8)](https://app.codacy.com?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Backend CI](https://github.com/PzocikErwin/TicketAR-Mundial-UCP-2026/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/PzocikErwin/TicketAR-Mundial-UCP-2026/actions/workflows/backend-ci.yml)
+[![Frontend CI](https://github.com/PzocikErwin/TicketAR-Mundial-UCP-2026/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/PzocikErwin/TicketAR-Mundial-UCP-2026/actions/workflows/frontend-ci.yml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4167fcb406a44fb89c4cdc047a3eb7a8)](https://app.codacy.com)
 ![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933?logo=nodedotjs&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-9-F69220?logo=pnpm&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-11-E0234E?logo=nestjs&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=0A0A0A)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-2-3FCF8E?logo=supabase&logoColor=white)
-![Clerk](https://img.shields.io/badge/Clerk-Auth-6C47FF?logo=clerk&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-Tests-2EAD33?logo=playwright&logoColor=white)
-![Jest](https://img.shields.io/badge/Jest-30-C21325?logo=jest&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-9-4B32C3?logo=eslint&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-3-F7B93E?logo=prettier&logoColor=1A2B34)
+![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3FCF8E?logo=supabase&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-E2E-2EAD33?logo=playwright&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-Unit_Tests-C21325?logo=jest&logoColor=white)
 
 <p align="center">
-  <a href="https://nestjs.com" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" width="40" /></a>
-  <a href="https://nextjs.org" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="Next.js" width="40" /></a>
-  <a href="https://react.dev" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" /></a>
-  <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" width="40" /></a>
-  <a href="https://tailwindcss.com" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" width="40" /></a>
-  <a href="https://supabase.com" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="Supabase" width="40" /></a>
-  <a href="https://clerk.com" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/clerk/6C47FF" alt="Clerk" width="40" /></a>
-  <a href="https://www.mercadopago.com" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/mercadopago/00B1EA" alt="Mercado Pago" width="40" /></a>
-  <a href="https://playwright.dev" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/playwright/2EAD33" alt="Playwright" width="40" /></a>
-  <a href="https://jestjs.io" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/jest/C21325" alt="Jest" width="40" /></a>
-  <a href="https://eslint.org" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/eslint/4B32C3" alt="ESLint" width="40" /></a>
-  <a href="https://prettier.io" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/prettier/F7B93E" alt="Prettier" width="40" /></a>
-  <a href="https://pnpm.io" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/pnpm/F69220" alt="pnpm" width="40" /></a>
-  <a href="https://nodejs.org" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" width="40" /></a>
+  <a href="https://nestjs.com" target="_blank"><img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" width="40" /></a>
+  <a href="https://nextjs.org" target="_blank"><img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="Next.js" width="40" /></a>
+  <a href="https://www.typescriptlang.org" target="_blank"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" width="40" /></a>
+  <a href="https://supabase.com" target="_blank"><img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="Supabase" width="40" /></a>
+  <a href="https://clerk.com" target="_blank"><img src="https://cdn.simpleicons.org/clerk/6C47FF" alt="Clerk" width="40" /></a>
+  <a href="https://www.mercadopago.com" target="_blank"><img src="https://cdn.simpleicons.org/mercadopago/00B1EA" alt="Mercado Pago" width="40" /></a>
+  <a href="https://playwright.dev" target="_blank"><img src="https://cdn.simpleicons.org/playwright/2EAD33" alt="Playwright" width="40" /></a>
+  <a href="https://jestjs.io" target="_blank"><img src="https://cdn.simpleicons.org/jest/C21325" alt="Jest" width="40" /></a>
+  <a href="https://railway.app" target="_blank"><img src="https://cdn.simpleicons.org/railway/0B0D0E" alt="Railway" width="40" /></a>
 </p>
 
-Plataforma web para gestion y compra de entradas del Mundial 2026.
-
-Contribuidores
-
-
-
-
-  <img src="https://contrib.rocks/image?repo=JuanmaInv/TicketAR---Mundial---UCP---2026-" />
-</a>
-
-
-## Comienza aqui
-
-Si es tu primera vez en el proyecto:
-
-- Revisa la documentacion funcional en [`docs/`](docs/)
-- Configura variables de entorno usando [`.env.example`](.env.example)
-- Levanta backend y frontend con los comandos de la seccion **Ejecucion local**
+> Plataforma web para la compra segura de entradas del Mundial 2026. Diseñada para eliminar la reventa ilegal: cada entrada está vinculada al pasaporte del titular y se valida en la puerta.
 
 ---
 
-## Descripcion
+## ¿Por qué está construido así?
 
-TicketAR centraliza el flujo completo de venta de entradas:
+El problema real que resuelve este sistema no es solo vender entradas — es garantizar que **quien compra es quien entra**, y que ningún asiento se venda dos veces. Esas dos restricciones guían cada decisión de arquitectura.
 
-- Visualizacion de partidos y sectores del estadio
-- Reserva temporal de tickets con expiracion automatica
-- Checkout con integracion de pagos
-- Emision de QR unico por entrada
-- Gestion de perfil e identidad de usuario (DNI/Pasaporte)
-- Panel de estadisticas y operaciones administrativas
+### Base de datos: Supabase (PostgreSQL)
 
----
+Supabase provee PostgreSQL con RLS (Row Level Security), lo que permite definir reglas de acceso a nivel de tabla directamente en la base de datos, no solo en la capa de aplicación. La alternativa era gestionar una instancia de Postgres propia, pero en un proyecto de este alcance (6 sectores, ~64 partidos, concurrencia moderada) el overhead operacional no se justifica. Supabase también incluye las funciones de DB que usamos para recalcular el estado de los partidos sin round-trips adicionales.
 
-## Arquitectura del proyecto
+### Autenticación: Clerk
 
-Este repositorio esta dividido en dos aplicaciones principales:
+Clerk se eligió sobre implementar JWT propio porque la validación de identidad es el núcleo del anti-fraude. Clerk provee un `userId` verificado por sesión que vinculamos a los datos de pasaporte en nuestra DB. Si el token es inválido, el guard de NestJS rechaza la request antes de llegar al servicio. Implementar esto desde cero con bcrypt + refresh tokens habría sido correcto, pero el costo de mantenimiento no agrega valor diferencial al proyecto.
 
-```text
-.
-├── backend-nest/      # API REST y logica de negocio (NestJS)
-├── frontend-client/   # Aplicacion web (Next.js)
-└── docs/              # Documentacion funcional y tecnica
+### Ciclo de vida del ticket: State Pattern
+
+Un ticket pasa por `RESERVADO → PAGADO → CANCELADO` y las transiciones tienen reglas estrictas: no se puede pagar un ticket expirado, no se puede cancelar uno ya pagado, no se puede generar un QR de uno reservado. En lugar de un `switch` por estado en cada método del servicio, cada estado es una clase con sus propias restricciones. El servicio no pregunta "¿en qué estado está?" — le delega la decisión al estado mismo.
+
+```
+ReservadoState.pagar()   → valida expiración → delega a PaymentsService
+PagadoState.pagar()      → lanza BadRequestException inmediatamente
+CanceladoState.cancelar() → lanza BadRequestException inmediatamente
 ```
 
-### Backend (`backend-nest`)
+### Pagos: Strategy Pattern
 
-API en NestJS orientada a modulos:
+El sistema soporta dos flujos de pago: **Mercado Pago** (asíncrono — el usuario va a un checkout externo y vuelve vía webhook) y un **modo simulado** (síncrono — útil para tests y demos). Ambos implementan `PaymentStrategy`. El servicio de tickets no sabe cuál está activo — solo llama `processTicketPayment()`. Cambiar de proveedor de pago no requiere tocar el servicio de negocio.
 
-- `usuarios`: gestion de usuarios y validacion de identidad
-- `matches`: partidos y disponibilidad
-- `stadium-sectors`: sectores y capacidad
-- `tickets`: reserva, estados, expiracion y QR
-- `payments`: estrategias de pago (Mercado Pago y simulada)
-- `stats`: metricas para panel administrativo
-- `notifications`: notificaciones post-pago
+### Comunicación entre módulos: Event Emitter (Observer)
 
-### Frontend (`frontend-client`)
+Cuando un ticket se paga, el módulo de notificaciones tiene que enviar el QR por email. La dependencia directa `TicketsService → NotificationsService` crearía un acoplamiento circular (Notifications necesita datos de Tickets). En cambio, `EntradasService` emite un evento `ticket.pagado` y `NotificationsService` lo escucha. Ningún módulo conoce al otro.
 
-Aplicacion Next.js (App Router) con:
+### Reserva temporal: Cron Job
 
-- Flujo de compra paso a paso
-- Vistas de partidos, checkout y mis tickets
-- Integracion de autenticacion con Clerk
-- Pruebas E2E y de componentes con Playwright
+Los asientos se bloquean por 15 minutos al reservar. Si el usuario no paga, el stock tiene que volver a estar disponible. Implementamos esto con un `@Cron(EVERY_MINUTE)` que escanea reservas expiradas y hace rollback del stock + actualiza el estado del partido. La alternativa (TTL en Redis) implicaba agregar otro servicio al stack; el cron sobre la misma DB es suficiente para la escala actual y más simple de operar.
 
 ---
 
-## Diagrama UML de clases (alto nivel)
+## Flujo principal
+
+```
+Usuario → reserva asientos (stock se decrementa en DB)
+        → checkout (15 min para pagar)
+           ├─ Pago simulado: ticket → PAGADO inmediatamente
+           └─ Mercado Pago: usuario va al checkout externo
+                           → webhook POST /payments/webhook
+                           → backend verifica con MP API
+                           → ticket → PAGADO
+                           → evento `ticket.pagado`
+                              └─ NotificationsService envía QR por email
+```
+
+---
+
+## Estructura del proyecto
+
+```
+.
+├── backend-nest/          # API REST — NestJS modular
+│   └── src/
+│       ├── tickets/       # Núcleo: reserva, estado, QR, expiración
+│       ├── payments/      # Strategy Pattern: MP + simulado, webhook
+│       ├── usuarios/      # Gestión de cuenta y validación de pasaporte
+│       ├── matches/       # Partidos y disponibilidad
+│       ├── stadium-sectors/ # Sectores y precios
+│       ├── notifications/ # Envío de QR por email (event-driven)
+│       ├── stats/         # Panel administrativo
+│       └── common/        # Guards, decorators, enums, Supabase client
+├── frontend-client/       # Next.js (App Router) + Tailwind + Clerk
+└── docs/                  # Documentación técnica y diagramas
+```
+
+---
+
+## Patrones aplicados
+
+| Patrón | Dónde | Por qué |
+|---|---|---|
+| **State** | `tickets/states/` | Transiciones de ticket sin condicionales dispersos |
+| **Strategy** | `payments/strategies/` | Intercambiar proveedor de pago sin tocar negocio |
+| **Repository** | `tickets/repositories/` | Aislar la capa de datos para poder testear sin DB |
+| **Observer / Event-Driven** | `EventEmitter2` en AppModule | Desacoplar notificaciones de la lógica de pago |
+| **Factory** | `TicketStateFactory` | Instanciar el estado correcto dado un string de DB |
+
+---
+
+## Diagrama de clases
 
 <p align="center">
   <a href="docs/diagrams/ticketar-class-diagram.svg">
@@ -108,148 +118,101 @@ Aplicacion Next.js (App Router) con:
   </a>
 </p>
 
-Fuente editable del diagrama: [`docs/diagrams/ticketar-class-diagram.mmd`](docs/diagrams/ticketar-class-diagram.mmd).
-Para verlo mas grande, abri el SVG: [`docs/diagrams/ticketar-class-diagram.svg`](docs/diagrams/ticketar-class-diagram.svg).
+Fuente editable: [`docs/diagrams/ticketar-class-diagram.mmd`](docs/diagrams/ticketar-class-diagram.mmd)
 
 ---
 
-## Patrones de diseno aplicados
+## ¿Qué se rompería con 100× más tráfico?
 
-- `State Pattern`: ciclo de vida del ticket (`reservado`, `pagado`, `cancelado`)
-- `Strategy Pattern`: comportamiento intercambiable para pagos y validaciones
-- `Repository Pattern`: abstraccion de acceso a datos (Supabase)
-- `Factory Pattern`: creacion de estados de ticket
-- `Observer/Event-driven`: eventos desacoplados entre modulos
+**1. El cron de expiración de reservas** es el cuello de botella más inmediato. Actualmente corre cada minuto en el proceso principal y hace un query + N updates (uno por ticket expirado). Con decenas de miles de reservas simultáneas, ese loop compite con requests normales por el connection pool de Supabase. La solución es mover la lógica a una función de base de datos (Postgres scheduled function o trigger con `pg_cron`) que opere directamente sobre los datos sin pasar por la aplicación.
 
----
+**2. El webhook de Mercado Pago no tiene lock distribuido.** Si MP envía la misma notificación dos veces en paralelo (lo cual hace bajo carga), dos workers podrían intentar marcar el mismo ticket como pagado simultáneamente. La solución es un advisory lock de Postgres (`SELECT pg_advisory_xact_lock(ticket_id)`) o un upsert condicional que ignore si el estado ya es `PAGADO`.
 
-## Stack tecnologico
-
-- **Backend:** NestJS, TypeScript, Supabase, Mercado Pago
-- **Frontend:** Next.js, React, Tailwind CSS, TypeScript, Clerk
-- **Testing:** Jest, Playwright
-- **Tooling:** ESLint, Prettier, pnpm
-
----
-
-## Requisitos
-
-- Node.js 20+
-- pnpm 9+
-
-Instalacion global de pnpm (si no lo tenes):
-
-```bash
-npm install -g pnpm
-```
-
----
-
-## Variables de entorno
-
-Usa [`.env.example`](.env.example) como base.
-
-### Backend (`backend-nest/.env`)
-
-```env
-SUPABASE_URL=tu_url_de_supabase
-SUPABASE_KEY=tu_anon_key_de_supabase
-FRONTEND_URL=http://localhost:3001
-PORT=3000
-```
-
-### Frontend (`frontend-client/.env.local`)
-
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
-CLERK_SECRET_KEY=sk_test_...
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_API_URL=http://localhost:3000
-```
-
----
-
-## Ejecucion local
-
-### 1. Backend
-
-```bash
-cd backend-nest
-pnpm install
-pnpm run start:dev
-```
-
-Backend disponible en `http://localhost:3000`.
-
-### 2. Frontend
-
-```bash
-cd frontend-client
-pnpm install
-pnpm run dev
-```
-
-Frontend disponible en `http://localhost:3001`.
-
----
-
-## Comandos disponibles
-
-### Backend (`backend-nest`)
-
-```bash
-pnpm run start:dev      # desarrollo con watch
-pnpm run build          # build de produccion
-pnpm run test           # tests unitarios
-pnpm run test:e2e       # tests e2e (jest)
-pnpm run test:playwright # suite Playwright
-pnpm run lint           # lint
-```
-
-### Frontend (`frontend-client`)
-
-```bash
-pnpm run dev            # desarrollo
-pnpm run build          # build de produccion
-pnpm run test           # e2e Playwright
-pnpm run test:ct        # component testing Playwright
-pnpm run lint           # lint
-pnpm run type-check     # chequeo de tipos
-```
-
----
-
-## Testing y calidad
-
-- Pruebas unitarias y de integracion en backend con Jest
-- Pruebas E2E y de componentes en frontend con Playwright
-- Validacion de estilo y calidad con ESLint
-
----
-
-## Documentacion adicional
-
-- [Documentacion tecnica y reportes](docs/)
-- [Requerimientos funcionales y no funcionales](frontend-client/docs/REQUERIMIENTOS.md)
-- [Documentacion de pagos backend](backend-nest/DOCUMENTACION_PAGOS.md)
+**3. Stock sin transacción atómica.** El decremento de stock actual es un `UPDATE ... SET stock = stock - N WHERE stock >= N`. Bajo alta concurrencia, dos requests para el mismo sector podrían leer el mismo stock disponible y ambas pasar la validación. La solución es mover el decremento a una función de DB que ejecute el check y el update en una sola transacción serializable.
 
 ---
 
 ## Seguridad
 
+- `ValidationPipe` global con `whitelist: true` — rechaza cualquier campo no declarado en el DTO
+- Guards de autenticación (Clerk) y autorización por rol (`ADMINISTRADOR`) en rutas sensibles
+- El QR se genera solo para tickets en estado `PAGADO` — no hay forma de obtener un QR antes de confirmar el pago
+- Máximo 6 entradas por cuenta por partido, validado en el servicio (no solo en el frontend)
+- `.env` nunca commiteado — ver `.env.example` para las variables requeridas
+
+---
+
+## Ejecutar localmente
+
+### Requisitos
+
+- Node.js 20+
+- pnpm 9+
+
+```bash
+npm install -g pnpm
+```
+
+### Variables de entorno
+
+Copiar `.env.example` en cada app y completar con tus credenciales de Supabase, Clerk y Mercado Pago:
+
+```bash
+cp .env.example backend-nest/.env
+cp frontend-client/.env.example frontend-client/.env.local
+```
+
+### Backend
+
+```bash
+cd backend-nest
+pnpm install
+pnpm run start:dev   # http://localhost:3000
+```
+
+### Frontend
+
+```bash
+cd frontend-client
+pnpm install
+pnpm run dev         # http://localhost:3001
+```
+
+---
+
+## Tests y CI
+
+```bash
+# Backend — unitarios
+cd backend-nest && pnpm run test
+
+# Backend — E2E (Playwright)
+cd backend-nest && pnpm run test:playwright
+
+# Frontend — E2E y componentes (Playwright)
+cd frontend-client && pnpm run test
+```
+
+El pipeline de GitHub Actions corre en cada push a `main`: build, lint y tests unitarios para backend y frontend.
+
+---
+
+## Convención de commits
+
+- `feat:` nueva funcionalidad
+- `fix:` corrección de errores
+- `docs:` cambios de documentación
+- `refactor:` mejora interna sin cambiar comportamiento
+- `chore:` tareas de mantenimiento
+
+---
+
+## Seguridad y vulnerabilidades
+
 Para reporte responsable de vulnerabilidades, ver [SECURITY.md](SECURITY.md).
 
 ---
 
-## Estado del proyecto
-
-Proyecto en desarrollo activo.
-
-## Convencion de commits
-
-- `feat:` nueva funcionalidad
-- `fix:` correccion de errores
-- `docs:` cambios de documentacion
-- `refactor:` mejora interna sin cambiar comportamiento
-- `chore:` tareas de mantenimiento
+<p align="center">
+  <img src="https://contrib.rocks/image?repo=JuanmaInv/TicketAR---Mundial---UCP---2026-" />
+</p>
